@@ -91,9 +91,9 @@ public class Trie {
 
 
     public static void main(String[] args) {
-        List<String> words = List.of("hello", "dog", "hell", "cat", "a", "hel","help","helps","helping");
-        Trie trie = new Trie(words);
+        List<String> words = List.of("Hello", "dog", "hell", "cat", "a", "hEl","help","helps","helping");
         List<String> strings = words.stream().map(String::toLowerCase).collect(Collectors.toList());
+        Trie trie = new Trie(strings);
         System.out.println(trie.suggest("hel"));
     }
 
